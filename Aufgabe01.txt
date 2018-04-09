@@ -1,0 +1,35 @@
+Phillip Mudavanhu
+Aufgabe 01
+Programmierung 
+
+
+Aufgabe 1.2------------------------------------
+
+Quelle text: github : www.github.com/phillipmudavanhu
+
+
+
+Aufgabe  1.3-----------------------------------
+
+Losung: die kleinst Zahlen die mit 1 und 20 teilbar ist 232792560
+
+
+Aufgabe  1.4-----------------------------------
+
+int main ()
+{
+		int a = 9;            ......Type[Interger]    Variable[a]    Wert[9]
+		bool b = false;       ......Type[Boolean]     Variable[b]    Wert[false]
+		char c = ’a’;         ......Type[Charecter]   Variable[c]    Wert[a]
+		double d = 1.3;       ......Type[Double]      Variable[d]    Wert[1.3]
+		
+		int const two = 2;    ......Type[Interger]    Constant [two] Wert[2] No changes of the value 2 once the compliled
+		double e = a/two;     ......Type[Double]      Variable [e]   Wert[9/2]  (Int/Int gives an Int (Data loss))
+		two = d;              ......Type[Interger]    Variable [d]   Wert[fehle meldung wegen zuwesung auf eine const Value]
+	return 0;
+}
+
+
+Aufgabe  1.5-----------------------------------
+
+
