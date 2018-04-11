@@ -2,6 +2,8 @@
 #include <catch.hpp>
 #include <cmath>
 
+float Pi = 3.14159265; 
+int Two = 2;
 
 //Aufgabe 1.8 GCD Funktion Implementation ---------------------------
 
@@ -28,6 +30,7 @@ int checksum(int a)
 
 
 //Aufgabe 1.10 sumMultiples  Funktion Implementation---------------------- 
+//takes two user defined parameters and (3&5 and uses 1-1000 to calculate)
 
 int sumMultiples(int a, int b){ 
 		int sum = 0;
@@ -53,6 +56,18 @@ int fract(float frac)
 
 
 
+//Aufgabe 1.12 The Volume and Area of a Cylinder----------------------
+
+float cyclinderVolume(int r, int h){ 
+float Volume = (Pi * (r * r) * h);
+	return Volume;
+}
+
+float cylinderArea(int r, int h){
+	float Area = (Two * Pi * r * h) + (Two * Pi * (r * r));
+
+	return Area;
+}
 
 
 
@@ -89,7 +104,7 @@ REQUIRE (sumMultiples (1,3) == 500500);
 }
 
 
-TEST_CASE("fract","[fract]")
+TEST_CASE("tests_fract","[fract]")
 {
 	REQUIRE(1.9999 == Approx( 2.0 ).epsilon(0.001));
 	REQUIRE(7.009999 == Approx( 7.01 ).epsilon(0.001));
@@ -98,6 +113,11 @@ TEST_CASE("fract","[fract]")
 	REQUIRE(78899.9 == Approx( 78900.0).epsilon(0.1));
 }
 
+TEST_CASE("tests_cylinder","[cylinder]")
+{
+	REQUIRE( cyclinderVolume (3,5) == 141.37167f);
+	REQUIRE( cylinderArea (3,5) == 150.79645f);
+}
 
 
 int main(int argc, char* argv[])
