@@ -98,8 +98,20 @@ double binomial(double x, double y)
 //Aufgabe 1.15 The Prime Number Function------------------------------
 
 
+bool is_prime(int number)
+{
+  if (number < 2)
+    return false;
 
-
+  for(int i=2;i<number;i++)
+  {
+    if(number%i==0)
+    {
+        return false;
+    }
+  }
+  return true;
+} 
 
 
 
@@ -167,6 +179,21 @@ TEST_CASE("tests_binomial","[binomial]")
 	REQUIRE( binomial (5,4) == 5);
 	REQUIRE( binomial (10,3) == 120);
 }
+
+
+TEST_CASE("tests_is_prime","[is_prime]")
+{
+	REQUIRE( is_prime(7) == true );
+	REQUIRE( is_prime(3) == true );
+	REQUIRE( is_prime(4) == false);
+	REQUIRE( is_prime(5) == true);
+
+	REQUIRE( is_prime(149) == true );
+	REQUIRE( is_prime(100) == false);
+	REQUIRE( is_prime(1000) == false);
+
+}
+
 
 
 
