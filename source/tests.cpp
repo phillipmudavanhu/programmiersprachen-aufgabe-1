@@ -27,6 +27,8 @@ int checksum(int a)
 }
 
 
+//Aufgabe 1.10 sumMultiples  Funktion Implementation---------------------- 
+
 int sumMultiples(int a, int b){ 
 		int sum = 0;
 		 for( int i = 1; i <= 1000; ++i )
@@ -48,6 +50,10 @@ int fract(float frac)
     double integer, value = frac, number = modf(value, &integer);
     return number;
 }
+
+
+
+
 
 
 
@@ -85,12 +91,12 @@ REQUIRE (sumMultiples (1,3) == 500500);
 
 TEST_CASE("fract","[fract]")
 {
+	REQUIRE(1.9999 == Approx( 2.0 ).epsilon(0.001));
 	REQUIRE(7.009999 == Approx( 7.01 ).epsilon(0.001));
 	REQUIRE(0.009999 == Approx( 0.01 ).epsilon(0.001));
-	REQUIRE(1.9999 == Approx( 2.0 ).epsilon(0.001));
+	REQUIRE(0.00009 == Approx( 0.0001 ).epsilon(0.0001));
+	REQUIRE(78899.9 == Approx( 78900.0).epsilon(0.1));
 }
-
-
 
 
 
