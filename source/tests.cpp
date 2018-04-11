@@ -32,7 +32,8 @@ int checksum(int a)
 //Aufgabe 1.10 sumMultiples  Funktion Implementation---------------------- 
 //takes two user defined parameters and (3&5 and uses 1-1000 to calculate)
 
-int sumMultiples(int a, int b){ 
+int sumMultiples(int a, int b)
+{ 
 		int sum = 0;
 		 for( int i = 1; i <= 1000; ++i )
 		 {			       
@@ -58,8 +59,9 @@ int fract(float frac)
 
 //Aufgabe 1.12 The Volume and Area of a Cylinder----------------------
 
-float cyclinderVolume(int r, int h){ 
-float Volume = (Pi * (r * r) * h);
+float cyclinderVolume(int radius, int height)
+{ 
+	float Volume = (Pi * (radius * radius) * height);
 	return Volume;
 }
 
@@ -70,38 +72,51 @@ float cylinderArea(int r, int h){
 }
 
 
+//Aufgabe 1.13 The Factorial Function----------------------------------
+
+int factorial(int num)
+{
+    if(num > 1)
+        return num * factorial(num - 1);
+    else
+        return 1;
+}
 
 
 
-//TESTS CASES---------------------- 
+
+//TESTS CASES---------------------------------------------------------
 
 
 TEST_CASE ("describe_gcd", "[gcd]")
 {
-REQUIRE (gcd(2,4) == 2);
-REQUIRE (gcd(9,6) == 3);
-REQUIRE (gcd(3,7) == 1);
+	REQUIRE (gcd(2,4) == 2);
+	REQUIRE (gcd(9,6) == 3);
+	REQUIRE (gcd(3,7) == 1);
 }
+
 
 
 TEST_CASE ("describe_checksum", "[checksum]")
 {
-REQUIRE (checksum(112601) == 11);
-REQUIRE (checksum(000000) == 0);
-REQUIRE (checksum(111111) == 6);
-REQUIRE (checksum(12345) == 15);
-REQUIRE (checksum(1) == 1);
-REQUIRE (checksum(02) == 2);
-REQUIRE (checksum(-1) == -1);
+	REQUIRE (checksum(112601) == 11);
+	REQUIRE (checksum(000000) == 0);
+	REQUIRE (checksum(111111) == 6);
+	REQUIRE (checksum(12345) == 15);
+	REQUIRE (checksum(1) == 1);
+	REQUIRE (checksum(02) == 2);
+	REQUIRE (checksum(-1) == -1);
 }
+
 
 
 TEST_CASE ("describe_sumMultuples", "[sumMultiples]")
 {
-REQUIRE (sumMultiples (3,5) == 234168);
-REQUIRE (sumMultiples (1,5) == 500500);
-REQUIRE (sumMultiples (1,3) == 500500);
+	REQUIRE (sumMultiples (3,5) == 234168);
+	REQUIRE (sumMultiples (1,5) == 500500);
+	REQUIRE (sumMultiples (1,3) == 500500);
 }
+
 
 
 TEST_CASE("tests_fract","[fract]")
@@ -115,9 +130,21 @@ TEST_CASE("tests_fract","[fract]")
 
 TEST_CASE("tests_cylinder","[cylinder]")
 {
-	REQUIRE( cyclinderVolume (3,5) == 141.37167f);
-	REQUIRE( cylinderArea (3,5) == 150.79645f);
+	REQUIRE( cyclinderVolume (10,5) == 1570.79639f);
+	REQUIRE( cylinderArea (10,5) == 942.47778f);
 }
+
+
+TEST_CASE("factorial","[factorial]")
+{
+	REQUIRE( factorial(1) == 1);
+	REQUIRE( factorial(5) == 120);
+	REQUIRE( factorial(7) == 5040);
+	REQUIRE( factorial(10) == 3628800);
+}
+
+
+
 
 
 int main(int argc, char* argv[])
