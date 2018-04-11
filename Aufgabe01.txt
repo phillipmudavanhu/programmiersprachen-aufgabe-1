@@ -33,3 +33,47 @@ int main ()
 Aufgabe  1.5-----------------------------------
 
 
+Initialisierung : This is the process by which a complier reserves or creates memory to contain a specified Variable Type
+
+Zuweisung        : This is a process of storing a value in an already defined (typed) storage. 
+
+Beispiele Initialisierung : int x; int y;
+
+Beispiele Zuweisung : x = y*y
+
+Unterschied : the difference is that intialisation clearly difines the type of a variable and can only be done before using the varible or without using the variables created. Zuweisung can only happen after initialisation and doesn't exist without intialization first. If one tries to use an uninitialized variable the compile will give 
+
+Aufgabe  1.6-----------------------------------
+
+
+ Deklaration (manchmal auch Forward-Deklaration
+genannt) und Definition und geben Sie jeweils ein Beispiel an. Welche Unterschiede
+gibt es? Geben Sie Beispiele für Funktionen, Variablen und Klassen.
+Hinweis: extern Variable 
+
+
+Aufgabe  1.7-----------------------------------
+
+
+# include <iostream>				
+
+int var = 3;					     .....Type of Scope [Global Variable] this variable stays throught the program    
+
+double sum (double a , double b)      
+{
+	return a + b ;					  .....Type of Scope [Local Variables]
+}									  once the function ends the local varible in this scope dies
+
+int square (int var)
+{
+	return var * var ;				 .....Type of Scope [Local Variables]
+}									 this is using a local variable and once the program terminates this var dies
+
+int main ()
+	{
+		for ( int i = 0; i != 100; ++ i ) {                   .....Type of Scope [Global to this Function Variables]
+		std :: cout << " i ^ 2 = " << square ( i ) << "\n";   .....Type of Scope [Local Variables]
+		std :: cout << " i + i = " << sum (i , i ) << "\n";   .....Type of Scope [Local Variables]
+	}
+	return 0;
+}
