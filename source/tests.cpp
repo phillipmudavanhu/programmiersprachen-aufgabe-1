@@ -83,6 +83,24 @@ int factorial(int num)
 }
 
 
+//Aufgabe 1.14 The Binomial Function----------------------------------
+
+double binomial(double x, double y)
+{
+    double number;
+  	if(y == 1)
+  		return x;
+     	
+    number = (factorial(x))/(factorial(y)*factorial((x - y)));
+    return number;
+   }
+
+//Aufgabe 1.15 The Prime Number Function------------------------------
+
+
+
+
+
 
 
 //TESTS CASES---------------------------------------------------------
@@ -135,7 +153,7 @@ TEST_CASE("tests_cylinder","[cylinder]")
 }
 
 
-TEST_CASE("factorial","[factorial]")
+TEST_CASE("tests_factorial","[factorial]")
 {
 	REQUIRE( factorial(1) == 1);
 	REQUIRE( factorial(5) == 120);
@@ -143,7 +161,12 @@ TEST_CASE("factorial","[factorial]")
 	REQUIRE( factorial(10) == 3628800);
 }
 
-
+TEST_CASE("tests_binomial","[binomial]")
+{
+	REQUIRE( binomial (5,3) == 10);
+	REQUIRE( binomial (5,4) == 5);
+	REQUIRE( binomial (10,3) == 120);
+}
 
 
 
