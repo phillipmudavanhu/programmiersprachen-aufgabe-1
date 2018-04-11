@@ -186,11 +186,10 @@ TEST_CASE("tests_is_prime","[is_prime]")
 	REQUIRE( is_prime(7) == true );
 	REQUIRE( is_prime(3) == true );
 	REQUIRE( is_prime(4) == false);
-	REQUIRE( is_prime(5) == true);
-
+	REQUIRE( is_prime(5) == true );
 	REQUIRE( is_prime(149) == true );
-	REQUIRE( is_prime(100) == false);
 	REQUIRE( is_prime(1000) == false);
+	REQUIRE( is_prime(3889) == true);
 
 }
 
