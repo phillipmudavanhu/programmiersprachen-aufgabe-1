@@ -107,7 +107,7 @@ bool is_prime(int number)
   {
     if(number%i==0)
     {
-        return false;
+    	return false;
     }
   }
   return true;
@@ -158,11 +158,14 @@ TEST_CASE("tests_fract","[fract]")
 	REQUIRE(78899.9 == Approx( 78900.0).epsilon(0.1));
 }
 
+
+
 TEST_CASE("tests_cylinder","[cylinder]")
 {
 	REQUIRE( cyclinderVolume (10,5) == 1570.79639f);
 	REQUIRE( cylinderArea (10,5) == 942.47778f);
 }
+
 
 
 TEST_CASE("tests_factorial","[factorial]")
@@ -173,12 +176,17 @@ TEST_CASE("tests_factorial","[factorial]")
 	REQUIRE( factorial(10) == 3628800);
 }
 
+
+
+
 TEST_CASE("tests_binomial","[binomial]")
 {
 	REQUIRE( binomial (5,3) == 10);
 	REQUIRE( binomial (5,4) == 5);
 	REQUIRE( binomial (10,3) == 120);
 }
+
+
 
 
 TEST_CASE("tests_is_prime","[is_prime]")
