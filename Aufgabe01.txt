@@ -77,3 +77,38 @@ int main ()
 	}
 	return 0;
 }
+
+
+
+Aufgabe  1.17-----------------------------------
+
+
+C++					:
+Quellcode			:			
+complier 			:
+Linker				:
+Objektcode			:
+Ausführbare Datei	:
+main()				:
+#include			:
+Kommentar			:
+Header				:
+Programm  			:
+Ausgabe				:
+std::cout			:
+std::cin     		:
+<< 					:
+>> 					:
+Funktion 			:
+Funktionssignatur 	:
+Deklaration 		:
+Definition 			:
+Typ 				:
+Typkonvertierung 	:
+Variable 			:
+Name 				:
+Wert 				:
+Initialisierung 	:
+Zuweisung 			:
+const 				:
+Gültigkeitsbereich 	: 
